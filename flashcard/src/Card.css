@@ -33,6 +33,10 @@
 .card__face--front {
   background: lightsalmon;
   box-shadow: 8px 7px 0px 0px salmon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
 }
 
 .card__face--back {
