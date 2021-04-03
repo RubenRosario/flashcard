@@ -85,11 +85,15 @@ const wordsList = [
   },
 ];
 
+const getRandom = (max) => {
+  return Math.floor(Math.random() * max);
+};
+
 function App() {
-  const random = Math.random();
+  const index = getRandom(wordsList.length);
   return (
     <div className="app-component">
-      <Card front={wordsList[0].word} back={wordsList[0].definition} />
+      <Card front={wordsList[index].word} back={wordsList[index].definition} />
     </div>
   );
 }
