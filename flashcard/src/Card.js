@@ -14,7 +14,32 @@ const Card = (props) => {
       <div className="card" onClick={flip}>
         <div className="card__face card__face--front">{word}</div>
         <div className="card__face card__face--back">
-          {JSON.stringify(definition)}
+          <ul>
+            <li>
+              {'It is a(n)'}
+              <ul>
+                {definition.is.map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              {'Meaning'}
+              <ul>
+                {definition.meaning.map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              {'Synonymous'}
+              <ul>
+                {definition.synonymous.map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
